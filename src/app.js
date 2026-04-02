@@ -8,8 +8,8 @@ const app = express();
 
 app.use(express.json());
 
-app.use(limiter);
+app.use(limiter); // Apply the rate limiter to all routes
 
-app.use("/api/auth", limiter, authRoutes);
+app.use("/api/auth", limiter, authRoutes); // Apply the rate limiter to the auth routes
 
 module.exports = app;

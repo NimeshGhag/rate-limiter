@@ -5,7 +5,8 @@ const limiter = require("../middlewares/limiter.middleware");
 
 const router = express.Router();
 
-router.get("/register", limiter, (req, res) => {
+// Apply the rate limiter to this specific route
+router.get("/register", limiter, (req, res) => { 
     res.send("Register route");
 });
 
